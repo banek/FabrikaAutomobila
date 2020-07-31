@@ -59,13 +59,13 @@ public class Parking {
 				return;
 			}
 		}
-		if(slobodnaPovrsinaParkinga()<=prevoznoSredstvo.getPovrsinaUM2()) {
+		if(slobodnaPovrsinaParkinga()<prevoznoSredstvo.getPovrsinaUM2()) {
 			System.out.println("Nema dovoljno mesta da bi se vozilo ubacilo");
 		}else {
 		listaParkiranihPrevoznihSredstava.add(prevoznoSredstvo);
 		}
 	}
-	private int slobodnaPovrsinaParkinga() {
+	public int slobodnaPovrsinaParkinga() {
 		int zazetapovrsina=0;
 		for(PrevoznoSredstvo ps: listaParkiranihPrevoznihSredstava) {
 			
