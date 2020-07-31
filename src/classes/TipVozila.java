@@ -1,0 +1,11 @@
+package classes;
+
+public enum TipVozila {
+	
+	KABRIOLET,
+	AUTOMOBIL_SA_KLASICNIM_KROVOM,
+	CISTERNA,
+	SLEPER,
+	GRADSKI_AUTOBUS,
+	MEDJUGRADSKI_AUTOBUS
+}
