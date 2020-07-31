@@ -27,5 +27,19 @@ public abstract class Automobil {
 	public void setListaDodatneOpreme(ArrayList<String> listaDodatneOpreme) {
 		this.listaDodatneOpreme = listaDodatneOpreme;
 	}
+	
+	@Override
+	public String toString() {
+		
+		StringBuilder ispis = new StringBuilder();
+		ispis.append("Automobil ima " + brojSedista+" i ovo mu je lista dodatne opreme:");
+		for(String listItem: listaDodatneOpreme) {
+			ispis.append(listItem+"\n");
+		}
 
+		
+		return ispis.toString();
+		
+		
+	}
 }
