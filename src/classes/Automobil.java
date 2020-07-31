@@ -2,7 +2,7 @@ package classes;
 
 import java.util.ArrayList;
 
-public abstract class Automobil {
+public abstract class Automobil extends PrevoznoSredstvo{
 	private int brojSedista;
 	private ArrayList<String> listaDodatneOpreme;
 	
@@ -10,8 +10,8 @@ public abstract class Automobil {
 		super();
 	}
 
-	public Automobil(int brojSedista, ArrayList<String> listaDodatneOpreme) {
-		super();
+	public Automobil(String boja, String nazivMarke, int povrsinaUM2, int brojSedista, ArrayList<String> listaDodatneOpreme) {
+		super(boja, nazivMarke, povrsinaUM2);
 		this.brojSedista = brojSedista;
 		this.listaDodatneOpreme = listaDodatneOpreme;
 	}
