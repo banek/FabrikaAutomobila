@@ -3,6 +3,10 @@ package classes;
 public class GradskiAutobus extends Autobusi {
 	private boolean zglobni;
 
+	public GradskiAutobus() {
+		super();
+	}
+
 	public GradskiAutobus(String boja, String nazivMarke, int povrsinaUM2, int brojMestaZaSedenje,
 			int brojMestaZaStajanje, boolean zglobni) {
 		super(boja, nazivMarke, povrsinaUM2, brojMestaZaSedenje, brojMestaZaStajanje);
@@ -17,4 +21,14 @@ public class GradskiAutobus extends Autobusi {
 		this.zglobni = zglobni;
 	}
 
+	@Override
+	public String toString() {
+		if(zglobni) {
+			return "Gradski autobus je zglobni.";
+		}else {
+			return "Gradski autobus nije zglobni.";
+		}
+	}
+
+	
 }

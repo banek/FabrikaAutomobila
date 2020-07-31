@@ -7,11 +7,9 @@ public abstract class PrevoznoSredstvo {
 	protected int povrsinaUM2;
 
 	public PrevoznoSredstvo() {
-		super();
 	}
 
 	public PrevoznoSredstvo(String boja, String nazivMarke, int povrsinaUM2) {
-		super();
 		this.boja = boja;
 		this.nazivMarke = nazivMarke;
 		this.povrsinaUM2 = povrsinaUM2;
@@ -39,6 +37,12 @@ public abstract class PrevoznoSredstvo {
 
 	public void setPovrsinaUM2(int povrsinaUM2) {
 		this.povrsinaUM2 = povrsinaUM2;
+	}
+
+	@Override
+	public String toString() {
+		return "Boja prevoznog sredstva je: " + this.boja + "\nMarka prevoznog sredstva je: " + this.nazivMarke
+				+ "\nPovrsina u metrima kvadratnim prevoznog sredstva je: " + this.povrsinaUM2;
 	}
 
 }
