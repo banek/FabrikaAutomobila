@@ -6,6 +6,10 @@ public abstract class Automobil {
 	private int brojSedista;
 	private ArrayList<String> listaDodatneOpreme;
 	
+	public Automobil() {
+		super();
+	}
+
 	public Automobil(int brojSedista, ArrayList<String> listaDodatneOpreme) {
 		super();
 		this.brojSedista = brojSedista;

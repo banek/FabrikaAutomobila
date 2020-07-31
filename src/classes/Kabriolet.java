@@ -7,6 +7,9 @@ public class Kabriolet extends Automobil {
 	private boolean mogucnostPakovanjaKrovaUPrtljaznik;
 	
 	
+	public Kabriolet() {
+		super();
+	}
 	public Kabriolet(int brojSedista, ArrayList<String> listaDodatneOpreme,boolean mogucnostSkidanjaKrova, boolean mogucnostPakovanjaKrovaUPrtljaznik) {
 		super(brojSedista, listaDodatneOpreme);
 		this.mogucnostSkidanjaKrova=mogucnostSkidanjaKrova;
@@ -28,12 +31,12 @@ public class Kabriolet extends Automobil {
 	@Override
 	public String toString() {
 		StringBuilder ispisi = new StringBuilder();
-		if(mogucnostPakovanjaKrovaUPrtljaznik=true) {
+		if(mogucnostPakovanjaKrovaUPrtljaznik) {
 			ispisi.append("Postoji mogucnost pakovanja krova u prtljaznik");
 		}else {
 			ispisi.append("Ne postoji mogucnost pakovanja krova u prtljaznik");
 		}
-		if(mogucnostSkidanjaKrova=true) {
+		if(mogucnostSkidanjaKrova) {
 			ispisi.append("Postoji mogucnost skidanja krova u potpunosti");
 		}else {
 			ispisi.append("Ne postoji mogucnost skidanja krova u potpunosti");

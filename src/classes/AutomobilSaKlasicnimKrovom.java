@@ -7,6 +7,10 @@ public class AutomobilSaKlasicnimKrovom extends Automobil {
 
 	
 
+	public AutomobilSaKlasicnimKrovom() {
+		super();
+	}
+
 	public AutomobilSaKlasicnimKrovom(int brojSedista, ArrayList<String> listaDodatneOpreme,double nosivostKrovaUKG) {
 		super(brojSedista, listaDodatneOpreme);
 		this.nosivostKrovaUKg=nosivostKrovaUKG;
