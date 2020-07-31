@@ -4,8 +4,12 @@ public class Cisterna extends Kamion {
 	private double kapacitetTanka;
 
 //konstruktor
-	public Cisterna(double kapacitetTanka) {
+	public Cisterna() {
 		super();
+	}
+
+	public Cisterna(int brojOsovina, double kapacitetTanka) {
+		super(brojOsovina);
 		this.kapacitetTanka = kapacitetTanka;
 	}
 
@@ -16,6 +20,11 @@ public class Cisterna extends Kamion {
 
 	public void setKapacitetTanka(double kapacitetTanka) {
 		this.kapacitetTanka = kapacitetTanka;
+	}
+
+	@Override
+	public String toString() {
+		return "Kapacitet tanka cisterne: " + kapacitetTanka;
 	}
 
 }

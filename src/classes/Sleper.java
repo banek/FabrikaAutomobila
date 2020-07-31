@@ -4,12 +4,16 @@ public class Sleper extends Kamion {
 	private double vucnaSnaga;
 
 //konstruktor
-	public Sleper(double vucnaSnaga) {
+	public Sleper() {
 		super();
+	}
+
+	public Sleper(int brojOsovina, double vucnaSnaga) {
+		super(brojOsovina);
 		this.vucnaSnaga = vucnaSnaga;
 	}
 
-//geteri i seteri
+	//geteri i seteri
 	public double getVucnaSnaga() {
 		return vucnaSnaga;
 	}
@@ -18,4 +22,8 @@ public class Sleper extends Kamion {
 		this.vucnaSnaga = vucnaSnaga;
 	}
 
+	@Override
+	public String toString() {
+		return "Vucna snaga slepera:" + vucnaSnaga;
+	}
 }
