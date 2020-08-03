@@ -1,5 +1,4 @@
 package classes;
-import classes.TipVozila;
 
 
 public class PraviVoziloFactory {
