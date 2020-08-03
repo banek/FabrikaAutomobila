@@ -3,10 +3,8 @@ package classes;
 import java.util.ArrayList;
 import java.util.List;
 
-import classes.TipVozila;
-
 public class PraviVoziloFactory {
-	List<Parking> listaParkinga = new ArrayList<>();
+	private List<Parking> listaParkinga = new ArrayList<>();
 	private static PraviVoziloFactory instanca = new PraviVoziloFactory();
 
 	private PraviVoziloFactory() {
@@ -49,6 +47,12 @@ public class PraviVoziloFactory {
 			System.out.println("Uneli ste nepostojeci tip vozila!");
 			return null;
 		}
+	}
+	
+	//public 
+
+	public List<Parking> getListaParkinga() {
+		return listaParkinga;
 	}
 
 }
