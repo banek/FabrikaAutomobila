@@ -3,6 +3,7 @@ package classes;
 
 public abstract class PrevoznoSredstvo {
 
+	protected TipVozila tipVozila;
 	protected String boja;
 	protected String nazivMarke;
 	protected int povrsinaUM2;
@@ -11,11 +12,29 @@ public abstract class PrevoznoSredstvo {
 		this.brojSasije=Helper.generisiBrojSasije();
 	}
 
-	public PrevoznoSredstvo(String boja, String nazivMarke, int povrsinaUM2) {
+	public PrevoznoSredstvo(TipVozila tipVozila, String boja, String nazivMarke, int povrsinaUM2) {
+		this.tipVozila = tipVozila;
 		this.boja = boja;
 		this.nazivMarke = nazivMarke;
 		this.povrsinaUM2 = povrsinaUM2;
 		this.brojSasije=Helper.generisiBrojSasije();
+	}
+
+	
+	public TipVozila getTipVozila() {
+		return tipVozila;
+	}
+
+	public void setTipVozila(TipVozila tipVozila) {
+		this.tipVozila = tipVozila;
+	}
+
+	public String getBrojSasije() {
+		return brojSasije;
+	}
+
+	public void setBrojSasije(String brojSasije) {
+		this.brojSasije = brojSasije;
 	}
 
 	public String getBoja() {

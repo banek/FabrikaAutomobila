@@ -7,9 +7,9 @@ public class MedjugradskiAutobus extends Autobusi {
 		super();
 	}
 
-	public MedjugradskiAutobus(String boja, String nazivMarke, int povrsinaUM2, int brojMestaZaSedenje,
-			int brojMestaZaStajanje, int kapacitetPrtljaznogProstora) {
-		super(boja, nazivMarke, povrsinaUM2, brojMestaZaSedenje, brojMestaZaStajanje);
+	public MedjugradskiAutobus(TipVozila tipVozila, String boja, String nazivMarke, int povrsinaUM2,
+			int brojMestaZaSedenje, int brojMestaZaStajanje, int kapacitetPrtljaznogProstora) {
+		super(tipVozila, boja, nazivMarke, povrsinaUM2, brojMestaZaSedenje, brojMestaZaStajanje);
 		KapacitetPrtljaznogProstora = kapacitetPrtljaznogProstora;
 	}
 

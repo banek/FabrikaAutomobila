@@ -7,9 +7,9 @@ public class GradskiAutobus extends Autobusi {
 		super();
 	}
 
-	public GradskiAutobus(String boja, String nazivMarke, int povrsinaUM2, int brojMestaZaSedenje,
+	public GradskiAutobus(TipVozila tipVozila, String boja, String nazivMarke, int povrsinaUM2, int brojMestaZaSedenje,
 			int brojMestaZaStajanje, boolean zglobni) {
-		super(boja, nazivMarke, povrsinaUM2, brojMestaZaSedenje, brojMestaZaStajanje);
+		super(tipVozila, boja, nazivMarke, povrsinaUM2, brojMestaZaSedenje, brojMestaZaStajanje);
 		this.zglobni = zglobni;
 	}
 
@@ -23,12 +23,11 @@ public class GradskiAutobus extends Autobusi {
 
 	@Override
 	public String toString() {
-		if(zglobni) {
+		if (zglobni) {
 			return "Gradski autobus je zglobni.";
-		}else {
+		} else {
 			return "Gradski autobus nije zglobni.";
 		}
 	}
 
-	
 }

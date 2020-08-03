@@ -8,8 +8,8 @@ public class Cisterna extends Kamion {
 		super();
 	}
 
-	public Cisterna(String boja, String nazivMarke, int povrsinaUM2, int brojOsovina, double kapacitetTanka) {
-		super(boja, nazivMarke, povrsinaUM2,brojOsovina);
+	public Cisterna(TipVozila tipVozila, String boja, String nazivMarke, int povrsinaUM2, int brojOsovina, double kapacitetTanka) {
+		super(tipVozila, boja, nazivMarke, povrsinaUM2,brojOsovina);
 		this.kapacitetTanka = kapacitetTanka;
 	}
 

@@ -8,8 +8,8 @@ public abstract class Autobusi extends PrevoznoSredstvo {
 		super();
 	}
 
-	public Autobusi(String boja, String nazivMarke, int povrsinaUM2, int brojMestaZaSedenje, int brojMestaZaStajanje) {
-		super(boja, nazivMarke, povrsinaUM2);
+	public Autobusi(TipVozila tipVozila, String boja, String nazivMarke, int povrsinaUM2, int brojMestaZaSedenje, int brojMestaZaStajanje) {
+		super(tipVozila, boja, nazivMarke, povrsinaUM2);
 		this.brojMestaZaSedenje = brojMestaZaSedenje;
 		this.brojMestaZaStajanje = brojMestaZaStajanje;
 	}

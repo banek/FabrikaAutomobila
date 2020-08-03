@@ -2,14 +2,14 @@ package classes;
 
 public abstract class Kamion extends PrevoznoSredstvo {
 	private int brojOsovina;
-	
+
 //konstruktor
 	public Kamion() {
 		super();
 	}
-	
-	public Kamion(String boja, String nazivMarke, int povrsinaUM2, int brojOsovina) {
-		super(boja, nazivMarke, povrsinaUM2);
+
+	public Kamion(TipVozila tipVozila, String boja, String nazivMarke, int povrsinaUM2, int brojOsovina) {
+		super(tipVozila, boja, nazivMarke, povrsinaUM2);
 		this.brojOsovina = brojOsovina;
 	}
 
