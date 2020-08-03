@@ -1,17 +1,22 @@
 import classes.Parking;
 import classes.PraviVoziloFactory;
-import classes.TipParkinga;
+import classes.ServiceFabrika;
+import classes.TipVozila;
 
 public class Program {
 
 	public static void main(String[] args) {
-		
-		PraviVoziloFactory fabrikaVozila = PraviVoziloFactory.vratiInstancu();
-		
-		Parking otvoreniParking = new Parking();
-		otvoreniParking.setTipParkinga(TipParkinga.OTVOREN);
-		otvoreniParking.setPovrsinaParkinga(1000);
-		
+		ServiceFabrika sf = new ServiceFabrika();
+
+		sf.KreirajIParkirajVozilo(TipVozila.KABRIOLET);
+		sf.KreirajIParkirajVozilo(TipVozila.CISTERNA);
+		sf.KreirajIParkirajVozilo(TipVozila.AUTOMOBIL_SA_KLASICNIM_KROVOM);
+
+		PraviVoziloFactory pv = PraviVoziloFactory.vratiInstancu();
+		for(Parking p: pv.getListaParkinga()) {
+			System.out.println(p.getListaParkiranihPrevoznihSredstava().size());
+		}
+
 	}
 
 }
