@@ -51,18 +51,20 @@ public class Parking {
 	public void setVisinaParkinga(int visinaParkinga) {
 		this.visinaParkinga = visinaParkinga;
 	}
-	public void dodavanjePrevoznogSredstva(PrevoznoSredstvo prevoznoSredstvo) {
+	public boolean dodavanjePrevoznogSredstva(PrevoznoSredstvo prevoznoSredstvo) {
 	
 		for(PrevoznoSredstvo ps :listaParkiranihPrevoznihSredstava) {
 			if(ps.equals(prevoznoSredstvo)) {
 				System.out.println("Prevozno sredstvo vec postoji");
-				return;
+				return false;
 			}
 		}
 		if(slobodnaPovrsinaParkinga()<prevoznoSredstvo.getPovrsinaUM2()) {
 			System.out.println("Nema dovoljno mesta da bi se vozilo ubacilo");
+			return false;
 		}else {
 		listaParkiranihPrevoznihSredstava.add(prevoznoSredstvo);
+		return true;
 		}
 	}
 	public int slobodnaPovrsinaParkinga() {
