@@ -10,8 +10,8 @@ public class Kabriolet extends Automobil {
 	public Kabriolet() {
 		super();
 	}
-	public Kabriolet(int brojSedista, ArrayList<String> listaDodatneOpreme,boolean mogucnostSkidanjaKrova, boolean mogucnostPakovanjaKrovaUPrtljaznik) {
-		super(brojSedista, listaDodatneOpreme);
+	public Kabriolet(String boja, String nazivMarke, int povrsinaUM2, int brojSedista, ArrayList<String> listaDodatneOpreme,boolean mogucnostSkidanjaKrova, boolean mogucnostPakovanjaKrovaUPrtljaznik) {
+		super(boja, nazivMarke, povrsinaUM2, brojSedista, listaDodatneOpreme);
 		this.mogucnostSkidanjaKrova=mogucnostSkidanjaKrova;
 		this.mogucnostPakovanjaKrovaUPrtljaznik=mogucnostPakovanjaKrovaUPrtljaznik;
 	}

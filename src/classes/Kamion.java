@@ -1,6 +1,6 @@
 package classes;
 
-public abstract class Kamion {
+public abstract class Kamion extends PrevoznoSredstvo {
 	private int brojOsovina;
 	
 //konstruktor
@@ -8,8 +8,8 @@ public abstract class Kamion {
 		super();
 	}
 	
-	public Kamion(int brojOsovina) {
-		super();
+	public Kamion(String boja, String nazivMarke, int povrsinaUM2, int brojOsovina) {
+		super(boja, nazivMarke, povrsinaUM2);
 		this.brojOsovina = brojOsovina;
 	}
 

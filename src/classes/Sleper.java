@@ -8,8 +8,8 @@ public class Sleper extends Kamion {
 		super();
 	}
 
-	public Sleper(int brojOsovina, double vucnaSnaga) {
-		super(brojOsovina);
+	public Sleper(String boja, String nazivMarke, int povrsinaUM2, int brojOsovina, double vucnaSnaga) {
+		super(boja, nazivMarke, povrsinaUM2, brojOsovina);
 		this.vucnaSnaga = vucnaSnaga;
 	}
 
