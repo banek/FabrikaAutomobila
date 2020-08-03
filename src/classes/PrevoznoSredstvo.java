@@ -47,5 +47,15 @@ public abstract class PrevoznoSredstvo {
 		return "Boja prevoznog sredstva je: " + this.boja + "\nMarka prevoznog sredstva je: " + this.nazivMarke
 				+ "\nPovrsina u metrima kvadratnim prevoznog sredstva je: " + this.povrsinaUM2;
 	}
+	
+	@Override
+    public boolean equals(Object o) { 
+		if (o == this) { 
+            return true; 
+        } 
+		PrevoznoSredstvo ps = (PrevoznoSredstvo) o;
+		return brojSasije.equals(ps.brojSasije);
+    } 
+} 
 
-}
+

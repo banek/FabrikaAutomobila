@@ -1,11 +1,21 @@
 package classes;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import classes.TipVozila;
 
 public class PraviVoziloFactory {
-
+	List<Parking> listaParkinga = new ArrayList<>();
 	private static PraviVoziloFactory instanca = new PraviVoziloFactory();
 
 	private PraviVoziloFactory() {
+		Parking otvorenParking = new Parking(TipParkinga.OTVOREN, 1000, 1000);
+		Parking natktivenParking = new Parking(TipParkinga.NATKRIVEN, 1000, 2);
+		Parking natktivenParking2 = new Parking(TipParkinga.NATKRIVEN, 50, 5);
+		listaParkinga.add(natktivenParking);
+		listaParkinga.add(natktivenParking2);
+		listaParkinga.add(otvorenParking);
 	}
 
 	public static PraviVoziloFactory vratiInstancu() {
@@ -13,7 +23,7 @@ public class PraviVoziloFactory {
 	}
 
 	public PrevoznoSredstvo napraviVozilo(TipVozila tipVozila) {
-		
+
 		if (tipVozila == null) {
 			System.out.println("Niste uneli tip vozila!");
 			return null;
@@ -40,6 +50,5 @@ public class PraviVoziloFactory {
 			return null;
 		}
 	}
-	
 
 }
