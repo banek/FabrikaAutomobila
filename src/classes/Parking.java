@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 
 public class Parking {
-	private String tipParkinga;
+	private TipParkinga tipParkinga;
 	private int povrsinaParkinga;
 	private int visinaParkinga;
 	ArrayList<PrevoznoSredstvo> listaParkiranihPrevoznihSredstava = new ArrayList<PrevoznoSredstvo>();
@@ -13,7 +13,7 @@ public class Parking {
 	public Parking() {
 	}
 
-	public Parking(String tipParkinga, int povrsinaParkinga, int visinaParkinga) {
+	public Parking(TipParkinga tipParkinga, int povrsinaParkinga, int visinaParkinga) {
 		
 		this.tipParkinga = tipParkinga;
 		this.povrsinaParkinga = povrsinaParkinga;
@@ -28,11 +28,11 @@ public class Parking {
 		this.listaParkiranihPrevoznihSredstava = listaParkiranihPrevoznihSredstava;
 	}
 
-	public String getTipParkinga() {
+	public TipParkinga getTipParkinga() {
 		return tipParkinga;
 	}
 
-	public void setTipParkinga(String tipParkinga) {
+	public void setTipParkinga(TipParkinga tipParkinga) {
 		this.tipParkinga = tipParkinga;
 	}
 
