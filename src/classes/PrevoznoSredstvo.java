@@ -1,18 +1,21 @@
 package classes;
 
+
 public abstract class PrevoznoSredstvo {
 
 	protected String boja;
 	protected String nazivMarke;
 	protected int povrsinaUM2;
-
+	protected String brojSasije;
 	public PrevoznoSredstvo() {
+		this.brojSasije=Helper.generisiBrojSasije();
 	}
 
 	public PrevoznoSredstvo(String boja, String nazivMarke, int povrsinaUM2) {
 		this.boja = boja;
 		this.nazivMarke = nazivMarke;
 		this.povrsinaUM2 = povrsinaUM2;
+		this.brojSasije=Helper.generisiBrojSasije();
 	}
 
 	public String getBoja() {
