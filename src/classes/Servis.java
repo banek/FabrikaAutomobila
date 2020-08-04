@@ -32,6 +32,19 @@ public class Servis {
 			System.out.println("Trenutno neam mesta ni na jednom parkingu");
 		}
 	}
+	
+	public void ispisiPodatke() {
+		int i = 1;
+		
+		for (Parking parking : pvf.getListaParkinga()) {
+			System.out.println("Parking " + i + " (" + parking.getListaParkiranihPrevoznihSredstava().size() +")");	
+			for(PrevoznoSredstvo ps : parking.getListaParkiranihPrevoznihSredstava()) {
+				System.out.println(" : " + ps.tipVozila);
+			}
+			i++;
+		}
+	}
+	
 }
 	
 	
