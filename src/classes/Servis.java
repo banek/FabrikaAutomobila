@@ -1,11 +1,13 @@
 package classes;
 
+import dto.DtoPrevoznoSredstvo;
+
 public class Servis {
 
 	PraviVoziloFactory pvf = PraviVoziloFactory.vratiInstancu();
 
-	public void PrimiPorudzbinuIKreiraj(TipVozila tipVozila) {
-		PrevoznoSredstvo ps = pvf.napraviVozilo(tipVozila);
+	public void PrimiPorudzbinuIKreiraj(TipVozila tipVozila, DtoPrevoznoSredstvo dtoPS) {
+		PrevoznoSredstvo ps = pvf.napraviVozilo(tipVozila, dtoPS);
 		ps.setTipVozila(tipVozila);
 		smestiVoziloUParking(ps);
 

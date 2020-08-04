@@ -1,13 +1,11 @@
 package dto;
 
-import java.time.chrono.ThaiBuddhistEra;
-
 import classes.GradskiAutobus;
 
 public class DtoGradskiAutobus extends DtoAutobusi{
 	public boolean zglobni;
 	
-	public GradskiAutobus castToEntety() {
+	public GradskiAutobus castToEntity() {
 		GradskiAutobus gradski = new GradskiAutobus();
 		gradski.setBoja(this.boja);
 		gradski.setBrojMestaZaSedenje(this.brojMestaZaSedenje);

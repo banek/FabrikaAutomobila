@@ -5,7 +5,7 @@ import classes.Sleper;
 public class DtoSleper extends DtoKamion{
 	public double vucnaSnaga;
 	
-	public Sleper castoToEntity() {
+	public Sleper castToEntity() {
 		Sleper sleper = new Sleper();
 		sleper.setBoja(this.boja);
 		sleper.setBrojOsovina(this.brojOsovina);
