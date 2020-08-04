@@ -76,4 +76,11 @@ public class Parking {
 		return povrsinaParkinga-zazetapovrsina;
 		
 	}
+
+	@Override
+	public String toString() {
+		return "Tip parkinga: " + tipParkinga + "\nPovrsina parkinga: " + povrsinaParkinga
+				+ "\nVisina parkinga: " + visinaParkinga;
+	}
+	
 }
