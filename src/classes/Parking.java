@@ -2,8 +2,6 @@ package classes;
 
 import java.util.ArrayList;
 
-
-
 public class Parking {
 	private TipParkinga tipParkinga;
 	private int povrsinaParkinga;
@@ -14,7 +12,6 @@ public class Parking {
 	}
 
 	public Parking(TipParkinga tipParkinga, int povrsinaParkinga, int visinaParkinga) {
-		
 		this.tipParkinga = tipParkinga;
 		this.povrsinaParkinga = povrsinaParkinga;
 		this.visinaParkinga = visinaParkinga;
@@ -51,29 +48,46 @@ public class Parking {
 	public void setVisinaParkinga(int visinaParkinga) {
 		this.visinaParkinga = visinaParkinga;
 	}
+
 	public boolean dodavanjePrevoznogSredstva(PrevoznoSredstvo prevoznoSredstvo) {
-	
-		for(PrevoznoSredstvo ps :listaParkiranihPrevoznihSredstava) {
-			if(ps.equals(prevoznoSredstvo)) {
+
+		for (PrevoznoSredstvo ps : listaParkiranihPrevoznihSredstava) {
+			if (ps.equals(prevoznoSredstvo)) {
 				System.out.println("Prevozno sredstvo vec postoji");
 				return false;
 			}
 		}
-		if(slobodnaPovrsinaParkinga()<prevoznoSredstvo.getPovrsinaUM2()) {
+		if (slobodnaPovrsinaParkinga() < prevoznoSredstvo.getPovrsinaUM2()) {
 			System.out.println("Nema dovoljno mesta da bi se vozilo ubacilo");
 			return false;
-		}else {
-		listaParkiranihPrevoznihSredstava.add(prevoznoSredstvo);
-		return true;
+		} else {
+			listaParkiranihPrevoznihSredstava.add(prevoznoSredstvo);
+			return true;
 		}
 	}
+
 	public int slobodnaPovrsinaParkinga() {
-		int zazetapovrsina=0;
-		for(PrevoznoSredstvo ps: listaParkiranihPrevoznihSredstava) {
-			
-			zazetapovrsina+=ps.getPovrsinaUM2();
+		int zazetapovrsina = 0;
+		for (PrevoznoSredstvo ps : listaParkiranihPrevoznihSredstava) {
+
+			zazetapovrsina += ps.getPovrsinaUM2();
 		}
-		return povrsinaParkinga-zazetapovrsina;
-		
+		return povrsinaParkinga - zazetapovrsina;
+
 	}
+
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < listaParkiranihPrevoznihSredstava.size(); i++) {
+			sb.append(listaParkiranihPrevoznihSredstava.get(i).getTipVozila());
+			sb.append("; ");
+		}
+		if(sb.length()<1) {
+			sb.append("NEMA PARKIRANIH VOZILA");
+		}
+		return "Broj parkiranih vozila na parkingu je: " + listaParkiranihPrevoznihSredstava.size()
+				+ "\nNa njemu su parkirani: " + sb + "\n-----------------------------------";
+	}
+
 }
