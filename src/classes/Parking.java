@@ -76,4 +76,13 @@ public class Parking {
 		return povrsinaParkinga-zazetapovrsina;
 		
 	}
+	@Override
+	public String toString() {
+		StringBuilder str = new StringBuilder();
+		str.append(tipParkinga+" parking  ima sledeca vozila: ");
+		for(PrevoznoSredstvo ps : listaParkiranihPrevoznihSredstava) {
+			str.append(ps.getTipVozila()+", ");
+		}
+		return str.toString();
+	}
 }

@@ -20,10 +20,8 @@ public class Program {
 		
 		s.PrimiPorudzbinuIKreiraj(TipVozila.CISTERNA);
 		s.PrimiPorudzbinuIKreiraj(TipVozila.AUTOMOBIL_SA_KLASICNIM_KROVOM);
+		s.ispisParkinga();
 		
-		for (Parking  parking : fabrikaVozila.getListaParkinga()) {
-			System.out.println(parking.getListaParkiranihPrevoznihSredstava().size());
-		}
 		
 	}
 

@@ -32,6 +32,11 @@ public class Servis {
 			System.out.println("Trenutno neam mesta ni na jednom parkingu");
 		}
 	}
+	public void ispisParkinga() {
+		for(Parking park :pvf.getListaParkinga()){
+			System.out.println(park.toString());
+		}
+	}
 }
 	
 	
