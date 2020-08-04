@@ -37,9 +37,9 @@ public class Servis {
 		int i = 1;
 		
 		for (Parking parking : pvf.getListaParkinga()) {
-			System.out.println("Parking " + i + " (" + parking.getListaParkiranihPrevoznihSredstava().size() +")");	
+			System.out.println("Parking " + i + " (" + parking.getListaParkiranihPrevoznihSredstava().size() +")" +":");	
 			for(PrevoznoSredstvo ps : parking.getListaParkiranihPrevoznihSredstava()) {
-				System.out.println(" : " + ps.tipVozila);
+				System.out.println(ps.tipVozila);
 			}
 			i++;
 		}
