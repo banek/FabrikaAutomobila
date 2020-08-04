@@ -79,7 +79,7 @@ public class Parking {
 	@Override
 	public String toString() {
 		StringBuilder str = new StringBuilder();
-		str.append(tipParkinga+" parking  ima sledeca vozila: ");
+		str.append(tipParkinga+" parking ima " +listaParkiranihPrevoznihSredstava.size()+" vozila i to su:");
 		for(PrevoznoSredstvo ps : listaParkiranihPrevoznihSredstava) {
 			str.append(ps.getTipVozila()+", ");
 		}
