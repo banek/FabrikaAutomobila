@@ -76,4 +76,14 @@ public class Parking {
 		return povrsinaParkinga-zazetapovrsina;
 		
 	}
+
+	@Override
+	public String toString() {
+		ArrayList<TipVozila>listavozila= new ArrayList<>();
+		for (PrevoznoSredstvo prevoznoSredstvo : listaParkiranihPrevoznihSredstava) {
+		listavozila.add(prevoznoSredstvo.getTipVozila());
+		}
+		return "tip parking="+tipParkinga+" visina parkinga= "+visinaParkinga+"m"+" vozila= "+listavozila;
+	}
+	
 }
