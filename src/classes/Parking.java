@@ -83,7 +83,7 @@ public class Parking {
 		for (PrevoznoSredstvo prevoznoSredstvo : listaParkiranihPrevoznihSredstava) {
 		listavozila.add(prevoznoSredstvo.getTipVozila());
 		}
-		return "tip parking="+tipParkinga+" visina parkinga= "+visinaParkinga+"m"+" vozila= "+listavozila;
+		return "tip parking="+tipParkinga+" visina parkinga= "+visinaParkinga+"m"+" vozila"+"("+listavozila.size()+")="+listavozila;
 	}
 	
 }
