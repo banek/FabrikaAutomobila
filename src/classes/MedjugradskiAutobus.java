@@ -5,12 +5,14 @@ public class MedjugradskiAutobus extends Autobusi {
 
 	public MedjugradskiAutobus() {
 		super();
+		povrsinaUM2 = 15;
 	}
 
 	public MedjugradskiAutobus(TipVozila tipVozila, String boja, String nazivMarke, int povrsinaUM2,
 			int brojMestaZaSedenje, int brojMestaZaStajanje, int kapacitetPrtljaznogProstora) {
 		super(tipVozila, boja, nazivMarke, povrsinaUM2, brojMestaZaSedenje, brojMestaZaStajanje);
 		KapacitetPrtljaznogProstora = kapacitetPrtljaznogProstora;
+		povrsinaUM2 = 15;
 	}
 
 	public int getKapacitetPrtljaznogProstora() {

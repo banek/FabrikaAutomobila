@@ -6,12 +6,14 @@ public class Sleper extends Kamion {
 //konstruktor
 	public Sleper() {
 		super();
+		povrsinaUM2=15;
 	}
 
 	public Sleper(TipVozila tipVozila, String boja, String nazivMarke, int povrsinaUM2, int brojOsovina,
 			double vucnaSnaga) {
 		super(tipVozila, boja, nazivMarke, povrsinaUM2, brojOsovina);
 		this.vucnaSnaga = vucnaSnaga;
+		povrsinaUM2=15;
 	}
 
 	// geteri i seteri

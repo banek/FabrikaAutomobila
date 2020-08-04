@@ -8,6 +8,7 @@ public abstract class Automobil extends PrevoznoSredstvo {
 
 	public Automobil() {
 		super();
+		povrsinaUM2 = 8;
 	}
 
 	public Automobil(TipVozila tipVozila, String boja, String nazivMarke, int povrsinaUM2, int brojSedista,
@@ -15,6 +16,7 @@ public abstract class Automobil extends PrevoznoSredstvo {
 		super(tipVozila, boja, nazivMarke, povrsinaUM2);
 		this.brojSedista = brojSedista;
 		this.listaDodatneOpreme = listaDodatneOpreme;
+		povrsinaUM2 = 8;
 	}
 
 	public int getBrojSedista() {

@@ -57,10 +57,6 @@ public abstract class PrevoznoSredstvo {
 		return povrsinaUM2;
 	}
 
-	public void setPovrsinaUM2(int povrsinaUM2) {
-		this.povrsinaUM2 = povrsinaUM2;
-	}
-
 	@Override
 	public String toString() {
 		return "Boja prevoznog sredstva je: " + this.boja + "\nMarka prevoznog sredstva je: " + this.nazivMarke
