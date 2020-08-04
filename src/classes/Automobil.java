@@ -5,9 +5,12 @@ import java.util.ArrayList;
 public abstract class Automobil extends PrevoznoSredstvo {
 	private int brojSedista;
 	private ArrayList<String> listaDodatneOpreme;
+	private final int POVRSINAAUTOMOBIL= 8;
+
 
 	public Automobil() {
 		super();
+		povrsinaUM2 = POVRSINAAUTOMOBIL;
 	}
 
 	public Automobil(TipVozila tipVozila, String boja, String nazivMarke, int povrsinaUM2, int brojSedista,
@@ -15,6 +18,7 @@ public abstract class Automobil extends PrevoznoSredstvo {
 		super(tipVozila, boja, nazivMarke, povrsinaUM2);
 		this.brojSedista = brojSedista;
 		this.listaDodatneOpreme = listaDodatneOpreme;
+		povrsinaUM2 = POVRSINAAUTOMOBIL;
 	}
 
 	public int getBrojSedista() {
