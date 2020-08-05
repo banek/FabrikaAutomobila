@@ -19,7 +19,6 @@ public class Program {
 		s.PrimiPorudzbinuIKreiraj(TipVozila.CISTERNA, dtoCisterna1);
 //		s.PrimiPorudzbinuIKreiraj(TipVozila.AUTOMOBIL_SA_KLASICNIM_KROVOM);
 //		s.PrimiPorudzbinuIKreiraj(TipVozila.KABRIOLET);
-
 		s.ispisiPodatke();
 		
 		

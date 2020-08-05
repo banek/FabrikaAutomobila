@@ -14,17 +14,13 @@ public class AutomobilSaKlasicnimKrovom extends Automobil {
 		super();
 	}
 
-	
-
 	public AutomobilSaKlasicnimKrovom(TipVozila tipVozila, TipMotora tipMotora, TipKlime tipKlime, Boja tipBoje,
 			TipDodatneOpreme tipDodatneOpreme, String boja, String nazivMarke, int povrsinaUM2, String brojSasije,
-			int brojSedista, ArrayList<String> listaDodatneOpreme, double nosivostKrovaUKg) {
+			double pocetnaCena, int brojSedista, ArrayList<String> listaDodatneOpreme, double nosivostKrovaUKg) {
 		super(tipVozila, tipMotora, tipKlime, tipBoje, tipDodatneOpreme, boja, nazivMarke, povrsinaUM2, brojSasije,
-				brojSedista, listaDodatneOpreme);
+				pocetnaCena, brojSedista, listaDodatneOpreme);
 		this.nosivostKrovaUKg = nosivostKrovaUKg;
 	}
-
-
 
 	public double getNosivostKrovaUKg() {
 		return nosivostKrovaUKg;

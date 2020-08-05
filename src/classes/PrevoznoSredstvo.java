@@ -17,7 +17,8 @@ public abstract class PrevoznoSredstvo {
 	protected int povrsinaUM2;
 	protected String brojSasije;
 	protected double pocetnaCena;
-	protected double ukupnaCena;
+	protected double ukupnaCena = pocetnaCena;
+	
 
 	public PrevoznoSredstvo() {
 		this.brojSasije = Helper.generisiBrojSasije();
@@ -48,6 +49,26 @@ public abstract class PrevoznoSredstvo {
 	public void setTipMotora(TipMotora tipMotora) {
 		this.tipMotora = tipMotora;
 	}
+
+	public double getPocetnaCena() {
+		return pocetnaCena;
+	}
+
+
+	public void setPocetnaCena(double pocetnaCena) {
+		this.pocetnaCena = pocetnaCena;
+	}
+
+
+	public double getUkupnaCena() {
+		return ukupnaCena;
+	}
+
+
+	public void setUkupnaCena(double ukupnaCena) {
+		this.ukupnaCena = ukupnaCena;
+	}
+
 
 	public TipKlime getTipKlime() {
 		return tipKlime;
@@ -123,4 +144,6 @@ public abstract class PrevoznoSredstvo {
 		PrevoznoSredstvo ps = (PrevoznoSredstvo) o;
 		return brojSasije.equals(ps.brojSasije);
 	}
+	
+	
 }

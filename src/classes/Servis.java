@@ -1,6 +1,10 @@
 package classes;
 
 import dto.DtoPrevoznoSredstvo;
+import Enum.Boja;
+import Enum.TipDodatneOpreme;
+import Enum.TipKlime;
+import Enum.TipMotora;
 
 public class Servis {
 
@@ -9,6 +13,7 @@ public class Servis {
 	public void PrimiPorudzbinuIKreiraj(TipVozila tipVozila, DtoPrevoznoSredstvo dtoPS) {
 		PrevoznoSredstvo ps = pvf.napraviVozilo(tipVozila, dtoPS);
 		ps.setTipVozila(tipVozila);
+		obracunajNovuCenu(ps);
 		smestiVoziloUParking(ps);
 
 	}
@@ -49,6 +54,67 @@ public class Servis {
 			System.out.println("Preostala slobodna povrsina parkinga je " + parking.slobodnaPovrsinaParkinga());
 			System.out.println("------------------------------------");
 		}
+	}
+	public void obracunajNovuCenu(PrevoznoSredstvo ps) {
+		double Cena=ps.getUkupnaCena();
+		if(ps.tipMotora!= null) {
+			switch(ps.tipMotora) {
+			case DIZEL:
+				Cena += Cena*0.05;
+				break;
+			case BENZIN:
+				Cena += Cena*0.03;
+				break;
+			case BENZIN_SA_KATALIZATOROM:
+				Cena += (Cena*0.05)*0.025;
+				break;
+			case DIZEL_SA_TURBINOM:
+				Cena += (Cena*0.05)*0.02;
+				break;
+			case DIZEL_SA_TURBINOM_I_PDFOM:
+				Cena += Cena*0.07;
+				break;
+			}		 
+		}
+		
+		if(ps.tipBoje!=null) {
+			switch(ps.tipBoje) {
+			case METALIK:
+				Cena += Cena*0.01;
+				break;
+			case METALIK_MAT:
+				Cena += (Cena*0.01)*0.01;
+				break;
+			}		 
+		}
+		
+		if(ps.tipDodatneOpreme!=null) {
+			switch(ps.tipDodatneOpreme) {
+			case GPS:
+				Cena += Cena*0.015;
+				break;
+			case GPS_HUD_SENZOR_ZA_PARKIRANJE:
+				Cena += (Cena*0.015)*0.02*0.015;
+			case GPS_I_HUD:
+				Cena += (Cena*0.015)*0.02;
+				break;
+			case SENZOR_ZA_PARKIRANJE:
+				Cena += Cena*0.07;
+				break;
+			}		 
+		}
+		
+		if(ps.tipKlime!=null) {
+			switch(ps.tipKlime) {
+			case AUTOMATSKA_KLIMA:
+				Cena += (Cena*0.03)*0.02;
+				break;
+			case MANUELNA_KLIMA:
+				Cena += Cena*0.03;
+				break;
+			}		 
+		}
+		ps.setUkupnaCena(Cena);
 	}
 
 }

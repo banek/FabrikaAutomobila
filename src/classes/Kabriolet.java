@@ -15,19 +15,15 @@ public class Kabriolet extends Automobil {
 		super();
 	}
 
-	
-
 	public Kabriolet(TipVozila tipVozila, TipMotora tipMotora, TipKlime tipKlime, Boja tipBoje,
 			TipDodatneOpreme tipDodatneOpreme, String boja, String nazivMarke, int povrsinaUM2, String brojSasije,
-			int brojSedista, ArrayList<String> listaDodatneOpreme, boolean mogucnostSkidanjaKrova,
+			double pocetnaCena, int brojSedista, ArrayList<String> listaDodatneOpreme, boolean mogucnostSkidanjaKrova,
 			boolean mogucnostPakovanjaKrovaUPrtljaznik) {
 		super(tipVozila, tipMotora, tipKlime, tipBoje, tipDodatneOpreme, boja, nazivMarke, povrsinaUM2, brojSasije,
-				brojSedista, listaDodatneOpreme);
+				pocetnaCena, brojSedista, listaDodatneOpreme);
 		this.mogucnostSkidanjaKrova = mogucnostSkidanjaKrova;
 		this.mogucnostPakovanjaKrovaUPrtljaznik = mogucnostPakovanjaKrovaUPrtljaznik;
 	}
-
-
 
 	public boolean isMogucnostSkidanjaKrova() {
 		return mogucnostSkidanjaKrova;

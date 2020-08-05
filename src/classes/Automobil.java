@@ -10,21 +10,24 @@ import Enum.TipMotora;
 public abstract class Automobil extends PrevoznoSredstvo {
 	private int brojSedista;
 	private ArrayList<String> listaDodatneOpreme;
-	private final int POVRSINAAUTOMOBIL= 8;
-
+	private final int POVRSINAAUTOMOBIL = 8;
+	private final double POCETNACENA = 1000;
 
 	public Automobil() {
 		super();
 		povrsinaUM2 = POVRSINAAUTOMOBIL;
+		pocetnaCena = POCETNACENA;
 	}
 
 	public Automobil(TipVozila tipVozila, TipMotora tipMotora, TipKlime tipKlime, Boja tipBoje,
 			TipDodatneOpreme tipDodatneOpreme, String boja, String nazivMarke, int povrsinaUM2, String brojSasije,
-			int brojSedista, ArrayList<String> listaDodatneOpreme) {
-		super(tipVozila, tipMotora, tipKlime, tipBoje, tipDodatneOpreme, boja, nazivMarke, povrsinaUM2, brojSasije);
+			double pocetnaCena, int brojSedista, ArrayList<String> listaDodatneOpreme) {
+		super(tipVozila, tipMotora, tipKlime, tipBoje, tipDodatneOpreme, boja, nazivMarke, povrsinaUM2, brojSasije,
+				pocetnaCena);
 		this.brojSedista = brojSedista;
 		this.listaDodatneOpreme = listaDodatneOpreme;
 		povrsinaUM2 = POVRSINAAUTOMOBIL;
+		pocetnaCena = POCETNACENA;
 	}
 
 	public int getBrojSedista() {
