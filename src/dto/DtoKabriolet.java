@@ -16,6 +16,10 @@ public class DtoKabriolet extends DtoAutomobil{
 		kabriolet.setMogucnostSkidanjaKrova(this.mogucnostSkidanjaKrova);
 		kabriolet.setNazivMarke(this.nazivMarke);
 		kabriolet.setTipVozila(this.tipVozila);
+		kabriolet.setTipBoje(this.tipBoje);
+		kabriolet.setTipDodatneOpreme(this.tipDodatneOpreme);
+		kabriolet.setTipKlime(this.tipKlime);
+		kabriolet.setTipMotora(this.tipMotora);
 		return kabriolet;
 	}
 }

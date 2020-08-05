@@ -14,6 +14,10 @@ public class DtoGradskiAutobus extends DtoAutobusi{
 		gradski.setNazivMarke(this.nazivMarke);
 		gradski.setTipVozila(this.tipVozila);
 		gradski.setZglobni(this.zglobni);
+		gradski.setTipBoje(this.tipBoje);
+		gradski.setTipDodatneOpreme(this.tipDodatneOpreme);
+		gradski.setTipKlime(this.tipKlime);
+		gradski.setTipMotora(this.tipMotora);
 		return gradski;
 	}
 }

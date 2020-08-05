@@ -14,6 +14,10 @@ public class DtoAutomobilSaKlasicnimKrovom extends DtoAutomobil{
 		aut.setNazivMarke(this.nazivMarke);
 		aut.setNosivostKrovaUKg(this.nosivostKrovaUKg);
 		aut.setTipVozila(this.tipVozila);
+		aut.setTipBoje(this.tipBoje);
+		aut.setTipDodatneOpreme(this.tipDodatneOpreme);
+		aut.setTipKlime(this.tipKlime);
+		aut.setTipMotora(this.tipMotora);
 		return aut;
 		
 	}

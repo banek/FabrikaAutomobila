@@ -14,6 +14,10 @@ public class DtoMedjugradskiAutobus extends DtoAutobusi{
 		mdjA.setKapacitetPrtljaznogProstora(this.KapacitetPrtljaznogProstora);
 		mdjA.setNazivMarke(this.nazivMarke);
 		mdjA.setTipVozila(this.tipVozila);
+		mdjA.setTipBoje(this.tipBoje);
+		mdjA.setTipDodatneOpreme(this.tipDodatneOpreme);
+		mdjA.setTipKlime(this.tipKlime);
+		mdjA.setTipMotora(this.tipMotora);
 		return mdjA;
 	}
 }

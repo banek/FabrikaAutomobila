@@ -13,6 +13,10 @@ public class DtoSleper extends DtoKamion{
 		sleper.setVucnaSnaga(this.vucnaSnaga);
 		sleper.setNazivMarke(this.nazivMarke);
 		sleper.setTipVozila(this.tipVozila);
+		sleper.setTipBoje(this.tipBoje);
+		sleper.setTipDodatneOpreme(this.tipDodatneOpreme);
+		sleper.setTipKlime(this.tipKlime);
+		sleper.setTipMotora(this.tipMotora);
 		return sleper;
 	}
 }
