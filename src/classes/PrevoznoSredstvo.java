@@ -1,6 +1,7 @@
 package classes;
 
 import Enum.Boja;
+import Enum.KonstrukcijaMotora;
 import Enum.TipDodatneOpreme;
 import Enum.TipKlime;
 import Enum.TipMotora;
@@ -8,10 +9,11 @@ import Enum.TipMotora;
 public abstract class PrevoznoSredstvo {
 
 	protected TipVozila tipVozila;
-	protected TipMotora tipMotora;
-	protected TipKlime tipKlime;
-	protected Boja tipBoje;
-	protected TipDodatneOpreme tipDodatneOpreme;
+	public TipMotora tipMotora;
+	public TipKlime tipKlime;
+	public Boja tipBoje;
+	public TipDodatneOpreme tipDodatneOpreme;
+	public KonstrukcijaMotora konstrukcijaMotora;
 	protected String boja;
 	protected String nazivMarke;
 	protected int povrsinaUM2;
@@ -33,6 +35,7 @@ public abstract class PrevoznoSredstvo {
 		this.tipKlime = tipKlime;
 		this.tipBoje = tipBoje;
 		this.tipDodatneOpreme = tipDodatneOpreme;
+		this.konstrukcijaMotora = KonstrukcijaMotora.TURBINA;
 		this.boja = boja;
 		this.nazivMarke = nazivMarke;
 		this.povrsinaUM2 = povrsinaUM2;

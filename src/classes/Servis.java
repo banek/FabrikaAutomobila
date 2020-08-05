@@ -1,6 +1,8 @@
 package classes;
 
 import dto.DtoPrevoznoSredstvo;
+import rules.EvaluatorCene;
+import rules.Rezultat;
 import Enum.Boja;
 import Enum.TipDodatneOpreme;
 import Enum.TipKlime;
@@ -12,6 +14,13 @@ public class Servis {
 
 	public void PrimiPorudzbinuIKreiraj(TipVozila tipVozila, DtoPrevoznoSredstvo dtoPS) {
 		PrevoznoSredstvo ps = pvf.napraviVozilo(tipVozila, dtoPS);
+		
+		Rezultat rezultat = new Rezultat();
+		rezultat.cena = ps.getPocetnaCena();
+		EvaluatorCene evaluator = new EvaluatorCene();
+		evaluator.evaluiraj(ps, rezultat);
+		System.out.println("Finalna cena je: " + rezultat.cena);
+		
 		ps.setTipVozila(tipVozila);
 		obracunajNovuCenu(ps);
 		System.out.println("Ukupna cena vozila iznosi: " + ps.getUkupnaCena());
@@ -68,7 +77,7 @@ public class Servis {
 				Cena += Cena * 0.03;
 				break;
 			case BENZIN_SA_KATALIZATOROM:
-				Cena += Cena * 0.05;
+				Cena += Cena * 0.03;
 				Cena += Cena * 0.025;
 				break;
 			case DIZEL_SA_TURBINOM:

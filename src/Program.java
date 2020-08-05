@@ -5,6 +5,7 @@ import classes.Servis;
 import classes.TipVozila;
 import dto.DtoCisterna;
 import dto.DtoKabriolet;
+import rules.EvaluatorCene;
 
 public class Program {
 
@@ -32,6 +33,7 @@ public class Program {
 //		s.PrimiPorudzbinuIKreiraj(TipVozila.AUTOMOBIL_SA_KLASICNIM_KROVOM);
 //		s.PrimiPorudzbinuIKreiraj(TipVozila.KABRIOLET);
 		s.ispisiPodatke();
+		
 
 	}
 
