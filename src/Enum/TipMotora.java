@@ -1,0 +1,9 @@
+package Enum;
+
+public enum TipMotora {
+ DIZEL,
+ DIZEL_SA_TURBINOM,
+ DIZEL_SA_TURBINOM_I_PDFOM,
+ BENZIN,
+ BENZIN_SA_KATALIZATOROM
+}
