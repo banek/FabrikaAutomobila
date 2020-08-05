@@ -101,6 +101,7 @@ public class Servis {
 				Cena += Cena * 0.015;
 				Cena += Cena * 0.02;
 				Cena += Cena * 0.015;
+				break;
 			case GPS_I_HUD:
 				Cena += Cena * 0.015;
 				Cena += Cena * 0.02;
