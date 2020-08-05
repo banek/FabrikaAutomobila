@@ -22,6 +22,7 @@ public abstract class Kamion extends PrevoznoSredstvo {
 				pocetnaCena);
 		this.brojOsovina = brojOsovina;
 		pocetnaCena = POCETNACENA;
+		ukupnaCena = POCETNACENA;
 	}
 
 	// geteri i seteri

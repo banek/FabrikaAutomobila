@@ -17,7 +17,7 @@ public abstract class PrevoznoSredstvo {
 	protected int povrsinaUM2;
 	protected String brojSasije;
 	protected double pocetnaCena;
-	protected double ukupnaCena = pocetnaCena;
+	protected double ukupnaCena;
 	
 
 	public PrevoznoSredstvo() {
@@ -28,7 +28,6 @@ public abstract class PrevoznoSredstvo {
 	public PrevoznoSredstvo(TipVozila tipVozila, TipMotora tipMotora, TipKlime tipKlime, Boja tipBoje,
 			TipDodatneOpreme tipDodatneOpreme, String boja, String nazivMarke, int povrsinaUM2, String brojSasije,
 			double pocetnaCena) {
-		super();
 		this.tipVozila = tipVozila;
 		this.tipMotora = tipMotora;
 		this.tipKlime = tipKlime;
