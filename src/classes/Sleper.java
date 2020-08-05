@@ -1,5 +1,10 @@
 package classes;
 
+import Enum.Boja;
+import Enum.TipDodatneOpreme;
+import Enum.TipKlime;
+import Enum.TipMotora;
+
 public class Sleper extends Kamion {
 	private double vucnaSnaga;
 	private final int POVRSINASLEPER = 15;
@@ -11,12 +16,18 @@ public class Sleper extends Kamion {
 		povrsinaUM2=POVRSINASLEPER;
 	}
 
-	public Sleper(TipVozila tipVozila, String boja, String nazivMarke, int povrsinaUM2, int brojOsovina,
-			double vucnaSnaga) {
-		super(tipVozila, boja, nazivMarke, povrsinaUM2, brojOsovina);
-		this.vucnaSnaga = vucnaSnaga;
-		povrsinaUM2=POVRSINASLEPER;
-	}
+	
+
+	public Sleper(TipVozila tipVozila, TipMotora tipMotora, TipKlime tipKlime, Boja tipBoje,
+		TipDodatneOpreme tipDodatneOpreme, String boja, String nazivMarke, int povrsinaUM2, String brojSasije,
+		int brojOsovina, double vucnaSnaga) {
+	super(tipVozila, tipMotora, tipKlime, tipBoje, tipDodatneOpreme, boja, nazivMarke, povrsinaUM2, brojSasije,
+			brojOsovina);
+	this.vucnaSnaga = vucnaSnaga;
+	povrsinaUM2=POVRSINASLEPER;
+}
+
+
 
 	// geteri i seteri
 	public double getVucnaSnaga() {

@@ -1,5 +1,10 @@
 package classes;
 
+import Enum.Boja;
+import Enum.TipDodatneOpreme;
+import Enum.TipKlime;
+import Enum.TipMotora;
+
 public class MedjugradskiAutobus extends Autobusi {
 	private int KapacitetPrtljaznogProstora;
 	private final int POVRSINAMEDJUGRADSKI = 15;
@@ -10,12 +15,18 @@ public class MedjugradskiAutobus extends Autobusi {
 		povrsinaUM2 = POVRSINAMEDJUGRADSKI;
 	}
 
-	public MedjugradskiAutobus(TipVozila tipVozila, String boja, String nazivMarke, int povrsinaUM2,
+	
+
+	public MedjugradskiAutobus(TipVozila tipVozila, TipMotora tipMotora, TipKlime tipKlime, Boja tipBoje,
+			TipDodatneOpreme tipDodatneOpreme, String boja, String nazivMarke, int povrsinaUM2, String brojSasije,
 			int brojMestaZaSedenje, int brojMestaZaStajanje, int kapacitetPrtljaznogProstora) {
-		super(tipVozila, boja, nazivMarke, povrsinaUM2, brojMestaZaSedenje, brojMestaZaStajanje);
+		super(tipVozila, tipMotora, tipKlime, tipBoje, tipDodatneOpreme, boja, nazivMarke, povrsinaUM2, brojSasije,
+				brojMestaZaSedenje, brojMestaZaStajanje);
 		KapacitetPrtljaznogProstora = kapacitetPrtljaznogProstora;
 		povrsinaUM2 = POVRSINAMEDJUGRADSKI;
 	}
+
+
 
 	public int getKapacitetPrtljaznogProstora() {
 		return KapacitetPrtljaznogProstora;

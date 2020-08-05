@@ -1,5 +1,10 @@
 package classes;
 
+import Enum.Boja;
+import Enum.TipDodatneOpreme;
+import Enum.TipKlime;
+import Enum.TipMotora;
+
 public abstract class Autobusi extends PrevoznoSredstvo {
 	protected int brojMestaZaSedenje;
 	protected int brojMestaZaStajanje;
@@ -7,9 +12,11 @@ public abstract class Autobusi extends PrevoznoSredstvo {
 	public Autobusi() {
 		super();
 	}
-
-	public Autobusi(TipVozila tipVozila, String boja, String nazivMarke, int povrsinaUM2, int brojMestaZaSedenje, int brojMestaZaStajanje) {
-		super(tipVozila, boja, nazivMarke, povrsinaUM2);
+	
+	public Autobusi(TipVozila tipVozila, TipMotora tipMotora, TipKlime tipKlime, Boja tipBoje,
+			TipDodatneOpreme tipDodatneOpreme, String boja, String nazivMarke, int povrsinaUM2, String brojSasije,
+			int brojMestaZaSedenje, int brojMestaZaStajanje) {
+		super(tipVozila, tipMotora, tipKlime, tipBoje, tipDodatneOpreme, boja, nazivMarke, povrsinaUM2, brojSasije);
 		this.brojMestaZaSedenje = brojMestaZaSedenje;
 		this.brojMestaZaStajanje = brojMestaZaStajanje;
 	}

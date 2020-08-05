@@ -2,6 +2,11 @@ package classes;
 
 import java.util.ArrayList;
 
+import Enum.Boja;
+import Enum.TipDodatneOpreme;
+import Enum.TipKlime;
+import Enum.TipMotora;
+
 public class Kabriolet extends Automobil {
 	private boolean mogucnostSkidanjaKrova;
 	private boolean mogucnostPakovanjaKrovaUPrtljaznik;
@@ -10,13 +15,19 @@ public class Kabriolet extends Automobil {
 		super();
 	}
 
-	public Kabriolet(TipVozila tipVozila, String boja, String nazivMarke, int povrsinaUM2, int brojSedista,
-			ArrayList<String> listaDodatneOpreme, boolean mogucnostSkidanjaKrova,
+	
+
+	public Kabriolet(TipVozila tipVozila, TipMotora tipMotora, TipKlime tipKlime, Boja tipBoje,
+			TipDodatneOpreme tipDodatneOpreme, String boja, String nazivMarke, int povrsinaUM2, String brojSasije,
+			int brojSedista, ArrayList<String> listaDodatneOpreme, boolean mogucnostSkidanjaKrova,
 			boolean mogucnostPakovanjaKrovaUPrtljaznik) {
-		super(tipVozila, boja, nazivMarke, povrsinaUM2, brojSedista, listaDodatneOpreme);
+		super(tipVozila, tipMotora, tipKlime, tipBoje, tipDodatneOpreme, boja, nazivMarke, povrsinaUM2, brojSasije,
+				brojSedista, listaDodatneOpreme);
 		this.mogucnostSkidanjaKrova = mogucnostSkidanjaKrova;
 		this.mogucnostPakovanjaKrovaUPrtljaznik = mogucnostPakovanjaKrovaUPrtljaznik;
 	}
+
+
 
 	public boolean isMogucnostSkidanjaKrova() {
 		return mogucnostSkidanjaKrova;

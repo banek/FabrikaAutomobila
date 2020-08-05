@@ -1,5 +1,10 @@
 package classes;
 
+import Enum.Boja;
+import Enum.TipDodatneOpreme;
+import Enum.TipKlime;
+import Enum.TipMotora;
+
 public class Cisterna extends Kamion {
 	private double kapacitetTanka;
 	private final int POVRSINACISTERNA = 20;
@@ -11,11 +16,18 @@ public class Cisterna extends Kamion {
 		povrsinaUM2=POVRSINACISTERNA;
 	}
 
-	public Cisterna(TipVozila tipVozila, String boja, String nazivMarke, int povrsinaUM2, int brojOsovina, double kapacitetTanka) {
-		super(tipVozila, boja, nazivMarke, povrsinaUM2,brojOsovina);
-		this.kapacitetTanka = kapacitetTanka;
-		povrsinaUM2=POVRSINACISTERNA;
-	}
+	
+
+public Cisterna(TipVozila tipVozila, TipMotora tipMotora, TipKlime tipKlime, Boja tipBoje,
+		TipDodatneOpreme tipDodatneOpreme, String boja, String nazivMarke, int povrsinaUM2, String brojSasije,
+		int brojOsovina, double kapacitetTanka) {
+	super(tipVozila, tipMotora, tipKlime, tipBoje, tipDodatneOpreme, boja, nazivMarke, povrsinaUM2, brojSasije,
+			brojOsovina);
+	this.kapacitetTanka = kapacitetTanka;
+	povrsinaUM2=POVRSINACISTERNA;
+}
+
+
 
 //geteri i seteri
 	public double getKapacitetTanka() {

@@ -2,6 +2,11 @@ package classes;
 
 import java.util.ArrayList;
 
+import Enum.Boja;
+import Enum.TipDodatneOpreme;
+import Enum.TipKlime;
+import Enum.TipMotora;
+
 public abstract class Automobil extends PrevoznoSredstvo {
 	private int brojSedista;
 	private ArrayList<String> listaDodatneOpreme;
@@ -13,9 +18,10 @@ public abstract class Automobil extends PrevoznoSredstvo {
 		povrsinaUM2 = POVRSINAAUTOMOBIL;
 	}
 
-	public Automobil(TipVozila tipVozila, String boja, String nazivMarke, int povrsinaUM2, int brojSedista,
-			ArrayList<String> listaDodatneOpreme) {
-		super(tipVozila, boja, nazivMarke, povrsinaUM2);
+	public Automobil(TipVozila tipVozila, TipMotora tipMotora, TipKlime tipKlime, Boja tipBoje,
+			TipDodatneOpreme tipDodatneOpreme, String boja, String nazivMarke, int povrsinaUM2, String brojSasije,
+			int brojSedista, ArrayList<String> listaDodatneOpreme) {
+		super(tipVozila, tipMotora, tipKlime, tipBoje, tipDodatneOpreme, boja, nazivMarke, povrsinaUM2, brojSasije);
 		this.brojSedista = brojSedista;
 		this.listaDodatneOpreme = listaDodatneOpreme;
 		povrsinaUM2 = POVRSINAAUTOMOBIL;
