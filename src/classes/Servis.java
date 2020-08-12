@@ -24,6 +24,12 @@ public class Servis {
 		ps.setTipVozila(tipVozila);
 		obracunajNovuCenu(ps);
 		System.out.println("Ukupna cena vozila iznosi: " + ps.getUkupnaCena());
+		ps.nextState();
+		ps.printState();
+		
+		ps.nextState();
+		ps.printState();
+		
 		smestiVoziloUParking(ps);
 
 	}
@@ -32,6 +38,8 @@ public class Servis {
 		if (ps instanceof Automobil) {
 			for (Parking parking : pvf.getListaParkinga()) {
 				if (parking.dodavanjePrevoznogSredstva(ps)) {
+					ps.nextState();
+					ps.printState();
 					System.out.println("Uspesno ste parkirali " + ps.getTipVozila() + " na parking");
 					break;
 				}
@@ -40,6 +48,8 @@ public class Servis {
 			for (Parking parking : pvf.getListaParkinga()) {
 				if (parking.getVisinaParkinga() > 2) {
 					if (parking.dodavanjePrevoznogSredstva(ps)) {
+						ps.nextState();
+						ps.printState();
 						System.out.println("Uspesno ste parkirali " + ps.getTipVozila() + " na parking");
 						break;
 					}

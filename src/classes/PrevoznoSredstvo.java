@@ -5,6 +5,8 @@ import Enum.KonstrukcijaMotora;
 import Enum.TipDodatneOpreme;
 import Enum.TipKlime;
 import Enum.TipMotora;
+import states.IVehicleState;
+import states.OrderState;
 
 public abstract class PrevoznoSredstvo {
 
@@ -21,9 +23,12 @@ public abstract class PrevoznoSredstvo {
 	protected double pocetnaCena;
 	protected double ukupnaCena;
 	
+	IVehicleState state = new OrderState();
+	
 
 	public PrevoznoSredstvo() {
 		this.brojSasije = Helper.generisiBrojSasije();
+		this.printState();
 	}
 
 
@@ -41,6 +46,29 @@ public abstract class PrevoznoSredstvo {
 		this.povrsinaUM2 = povrsinaUM2;
 		this.brojSasije = Helper.generisiBrojSasije();
 		this.pocetnaCena = pocetnaCena;
+		this.printState();
+	}
+	
+	public void printState() {
+		this.state.printStatus();
+	}
+	
+	public void nextState() {
+		this.state.next(this);
+	}
+	
+	public void previousState() {
+		this.state.prev(this);
+	}
+
+
+	public IVehicleState getState() {
+		return state;
+	}
+
+
+	public void setState(IVehicleState state) {
+		this.state = state;
 	}
 
 
