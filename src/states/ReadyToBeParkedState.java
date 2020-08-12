@@ -2,22 +2,21 @@ package states;
 
 import classes.PrevoznoSredstvo;
 
-public class ParkedState implements IVehicleState {
+public class ReadyToBeParkedState implements IVehicleState {
 
 	@Override
 	public void next(PrevoznoSredstvo ps) {
-		System.out.println("Ovo je poslednje stanje");
+		ps.setState(new ParkedState());
 	}
 
 	@Override
 	public void prev(PrevoznoSredstvo ps) {
-		ps.setState(new ReadyToBeParkedState());
-		
+		ps.setState(new FinishedState());
 	}
 
 	@Override
 	public void printStatus() {
-		System.out.println("Vozilo je PARKIRANO!");
+		System.out.println("Vozilo je spremno za PARKIRANJE!");
 	}
 
 }

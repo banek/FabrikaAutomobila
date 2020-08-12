@@ -6,7 +6,7 @@ public class FinishedState implements IVehicleState {
 
 	@Override
 	public void next(PrevoznoSredstvo ps) {
-		ps.setState(new ParkedState());
+		ps.setState(new ReadyToBeParkedState());
 	}
 
 	@Override

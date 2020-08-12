@@ -3,7 +3,7 @@ package classes;
 import dto.DtoPrevoznoSredstvo;
 import rules.EvaluatorCene;
 import rules.Rezultat;
-import states.ParkedState;
+import states.ReadyToBeParkedState;
 import Enum.Boja;
 import Enum.TipDodatneOpreme;
 import Enum.TipKlime;
@@ -40,10 +40,12 @@ public class Servis {
 
 	public void smestiVoziloUParking(PrevoznoSredstvo ps) {
 		
-		if(ps.state instanceof ParkedState) {
+		if(ps.state instanceof ReadyToBeParkedState) {
 			if (ps instanceof Automobil) {
 				for (Parking parking : pvf.getListaParkinga()) {
 					if (parking.dodavanjePrevoznogSredstva(ps)) {
+						ps.nextState();
+						ps.printState();
 						System.out.println("Uspesno ste parkirali " + ps.getTipVozila() + " na parking");
 						break;
 					}
@@ -52,6 +54,8 @@ public class Servis {
 				for (Parking parking : pvf.getListaParkinga()) {
 					if (parking.getVisinaParkinga() > 2) {
 						if (parking.dodavanjePrevoznogSredstva(ps)) {
+							ps.nextState();
+							ps.printState();
 							System.out.println("Uspesno ste parkirali " + ps.getTipVozila() + " na parking");
 							break;
 						}
