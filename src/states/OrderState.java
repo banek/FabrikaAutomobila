@@ -7,7 +7,7 @@ public class OrderState implements IVehicleState{
 	@Override
 	public void next(PrevoznoSredstvo ps) {
 		
-		if(ps.getBoja() == null) {
+		if(ps.getBoja().equalsIgnoreCase("ZELENA")) {
 			System.out.println("Niste odabrali Boju");
 			ps.setState(new AbortState());
 		}else {

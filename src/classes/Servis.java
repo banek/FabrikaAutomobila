@@ -3,6 +3,7 @@ package classes;
 import dto.DtoPrevoznoSredstvo;
 import rules.EvaluatorCene;
 import rules.Rezultat;
+import states.ParkedState;
 import Enum.Boja;
 import Enum.TipDodatneOpreme;
 import Enum.TipKlime;
@@ -30,33 +31,37 @@ public class Servis {
 		ps.nextState();
 		ps.printState();
 		
+		ps.nextState();
+		ps.printState();
+		
 		smestiVoziloUParking(ps);
 
 	}
 
 	public void smestiVoziloUParking(PrevoznoSredstvo ps) {
-		if (ps instanceof Automobil) {
-			for (Parking parking : pvf.getListaParkinga()) {
-				if (parking.dodavanjePrevoznogSredstva(ps)) {
-					ps.nextState();
-					ps.printState();
-					System.out.println("Uspesno ste parkirali " + ps.getTipVozila() + " na parking");
-					break;
-				}
-			}
-		} else if (ps instanceof Kamion || ps instanceof Autobusi) {
-			for (Parking parking : pvf.getListaParkinga()) {
-				if (parking.getVisinaParkinga() > 2) {
+		
+		if(ps.state instanceof ParkedState) {
+			if (ps instanceof Automobil) {
+				for (Parking parking : pvf.getListaParkinga()) {
 					if (parking.dodavanjePrevoznogSredstva(ps)) {
-						ps.nextState();
-						ps.printState();
 						System.out.println("Uspesno ste parkirali " + ps.getTipVozila() + " na parking");
 						break;
 					}
 				}
+			} else if (ps instanceof Kamion || ps instanceof Autobusi) {
+				for (Parking parking : pvf.getListaParkinga()) {
+					if (parking.getVisinaParkinga() > 2) {
+						if (parking.dodavanjePrevoznogSredstva(ps)) {
+							System.out.println("Uspesno ste parkirali " + ps.getTipVozila() + " na parking");
+							break;
+						}
+					}
+				}
+			} else {
+				System.out.println("Trenutno neam mesta ni na jednom parkingu");
 			}
-		} else {
-			System.out.println("Trenutno neam mesta ni na jednom parkingu");
+		}else {
+			System.out.println("Vozilo jos uvek nije u stanju PARKIRANJA");
 		}
 	}
 

@@ -16,7 +16,7 @@ public class ParkedState implements IVehicleState {
 
 	@Override
 	public void printStatus() {
-		System.out.println("Vozilo je PARKIRANO");
+		System.out.println("Vozilo je spremno za PARKIRANJE");
 	}
 
 }
