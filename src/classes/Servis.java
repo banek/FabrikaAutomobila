@@ -1,6 +1,7 @@
 package classes;
 
 import dto.DtoPrevoznoSredstvo;
+import states.FinishedState;
 
 public class Servis {
 
@@ -8,7 +9,19 @@ public class Servis {
 
 	public void PrimiPorudzbinuIKreiraj(TipVozila tipVozila, DtoPrevoznoSredstvo dtoPS) {
 		PrevoznoSredstvo ps = pvf.napraviVozilo(tipVozila, dtoPS);
+		
 		ps.setTipVozila(tipVozila);
+		
+		//if(ps.getState() instanceof FinishedState) {
+		//	smestiVoziloUParking(ps);
+		//}
+		
+		ps.nextState();
+		ps.printState();
+		
+		ps.nextState();
+		ps.printState();
+		
 		smestiVoziloUParking(ps);
 
 	}
@@ -17,6 +30,8 @@ public class Servis {
 		if (ps instanceof Automobil) {
 			for (Parking parking : pvf.getListaParkinga()) {
 				if (parking.dodavanjePrevoznogSredstva(ps)) {
+					ps.nextState();
+					ps.printState();
 					System.out.println("Uspesno ste parkirali " + ps.getTipVozila() + " na parking");
 					break;
 				}
@@ -25,6 +40,8 @@ public class Servis {
 			for (Parking parking : pvf.getListaParkinga()) {
 				if (parking.getVisinaParkinga() > 2) {
 					if (parking.dodavanjePrevoznogSredstva(ps)) {
+						ps.nextState();
+						ps.printState();
 						System.out.println("Uspesno ste parkirali " + ps.getTipVozila() + " na parking");
 						break;
 					}

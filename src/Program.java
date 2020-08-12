@@ -1,5 +1,6 @@
 import classes.Servis;
 import classes.TipVozila;
+import dto.DtoAutomobilSaKlasicnimKrovom;
 import dto.DtoCisterna;
 
 public class Program {
@@ -16,7 +17,9 @@ public class Program {
 		dtoCisterna1.tipVozila = TipVozila.CISTERNA;
 		
 		s.PrimiPorudzbinuIKreiraj(TipVozila.CISTERNA, dtoCisterna1);
-//		s.PrimiPorudzbinuIKreiraj(TipVozila.AUTOMOBIL_SA_KLASICNIM_KROVOM);
+
+		DtoAutomobilSaKlasicnimKrovom dtoKlKr = new DtoAutomobilSaKlasicnimKrovom();
+		s.PrimiPorudzbinuIKreiraj(TipVozila.AUTOMOBIL_SA_KLASICNIM_KROVOM, dtoKlKr);
 //		s.PrimiPorudzbinuIKreiraj(TipVozila.KABRIOLET);
 	
 		s.ispisiPodatke();

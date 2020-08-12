@@ -1,5 +1,6 @@
 package classes;
 
+import states.*;
 
 public abstract class PrevoznoSredstvo {
 
@@ -8,8 +9,12 @@ public abstract class PrevoznoSredstvo {
 	protected String nazivMarke;
 	protected int povrsinaUM2;
 	protected String brojSasije;
+	
+	IVehicleState state = new OrderState();
+	
 	public PrevoznoSredstvo() {
 		this.brojSasije=Helper.generisiBrojSasije();
+		this.printState();
 	}
 
 	public PrevoznoSredstvo(TipVozila tipVozila, String boja, String nazivMarke, int povrsinaUM2) {
@@ -18,8 +23,37 @@ public abstract class PrevoznoSredstvo {
 		this.nazivMarke = nazivMarke;
 		this.povrsinaUM2 = povrsinaUM2;
 		this.brojSasije=Helper.generisiBrojSasije();
+		this.printState();
+	}
+	
+	
+	public void printState() {
+		this.state.printStatus();
+	}
+	
+	public void nextState() {
+		this.state.next(this);
+	}
+	
+	public void previousState() {
+		this.state.prev(this);
+	}
+	
+	
+	public IVehicleState getState() {
+		return state;
 	}
 
+	public void setState(IVehicleState state) {
+		this.state = state;
+	}
+
+	
+	
+	
+	
+	
+	
 	
 	public TipVozila getTipVozila() {
 		return tipVozila;
