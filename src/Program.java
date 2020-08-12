@@ -14,7 +14,7 @@ public class Program {
 		Servis s = new Servis();
 
 		DtoCisterna dtoCisterna1 = new DtoCisterna();
-		dtoCisterna1.boja = "Zelena";
+		dtoCisterna1.boja = "Plava";
 		dtoCisterna1.brojOsovina = 3;
 		dtoCisterna1.kapacitetTanka = 150;
 		dtoCisterna1.nazivMarke = "VW";

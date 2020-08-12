@@ -8,7 +8,7 @@ public class OrderState implements IVehicleState{
 	public void next(PrevoznoSredstvo ps) {
 		
 		if(ps.getBoja().equalsIgnoreCase("ZELENA")) {
-			System.out.println("Niste odabrali Boju");
+			System.out.println("Ne proizvodimo vozila zelene boje");
 			ps.setState(new AbortState());
 		}else {
 			ps.setState(new InConstructionState());
