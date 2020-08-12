@@ -26,8 +26,6 @@ public class AutomobilSaKlasicnimKrovom extends Automobil {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-
 		return "Nosivost krova automobila je " + nosivostKrovaUKg + "Kg";
-
 	}
 }
